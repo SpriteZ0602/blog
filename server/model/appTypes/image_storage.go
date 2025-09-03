@@ -22,6 +22,7 @@ func (s *Storage) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
+// String 返回存储类型的字符串表示
 func (s Storage) String() string {
 	var str string
 	switch s {
@@ -35,6 +36,7 @@ func (s Storage) String() string {
 	return str
 }
 
+// ToStorage 将字符串转换为 Storage 类型
 func ToStorage(str string) Storage {
 	switch str {
 	case "本地":
