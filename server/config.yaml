@@ -97,7 +97,7 @@ website:
 
 zap:
   level: info
-  file_name: log/go_blog.log
+  filename: log/go_blog.log
   max_size: 200
   max_backups: 5
   max_age: 30

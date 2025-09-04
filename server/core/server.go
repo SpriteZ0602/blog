@@ -18,6 +18,6 @@ func RunServer() {
 
 	// 启动服务器
 	s := initServer(addr, Router)
-	global.Log.Info("服务器启动成功，监听地址: %s", zap.String("address", addr))
+	global.Log.Info("服务器启动成功", zap.String("监听地址", addr))
 	global.Log.Error(s.ListenAndServe().Error())
 }
