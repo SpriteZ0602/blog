@@ -32,6 +32,8 @@ server/                              # 后端目录
 │   ├── config.go                    # 配置加载
 │   ├── server.go                    # 服务器核心
 │   └── zap.go                       # 日志处理
+├── elasticsearch                    # 搜索框架
+│   └── article.go                   # 文章表
 ├── global/                          # 全局对象
 │   └── global.go                    # 全局实例定义
 ├── initialize/                      # 初始化模块
@@ -42,8 +44,24 @@ server/                              # 后端目录
 │   ├── redis.go                     # Redis 初始化
 │   └── router.go                    # 路由初始化
 ├── model/                           # 数据模型
-│   └── appTypes/                    # 应用类型
-│       └── image_storage.go         # 存储类型
+│   ├── appTypes/                    # 应用类型
+│   │   ├── image_category.go        # 图片分类
+│   │   ├── image_storage.go         # 存储类型
+│   │   ├── user_register.go         # 用户注册
+│   │   └── user_role.go            # 用户角色
+│   └── database/                    # 数据库模型
+│       ├── advertisement.go         # 广告
+│       ├── artical_category.go      # 文章分类
+│       ├── article_like.go          # 文章点赞
+│       ├── article_tag.go           # 文章标签
+│       ├── comment.go               # 评论
+│       ├── feedback.go              # 反馈
+│       ├── footer_link.go           # 底部链接
+│       ├── friend_link.go           # 友情链接
+│       ├── image.go                 # 图片
+│       ├── jwt_blacklist.go         # JWT黑名单
+│       ├── login.go                 # 登录
+│       └── user.go                  # 用户
 ├── task/                            # 定时任务
 │   └── enter.go                     # 任务入口
 ├── utils/                           # 工具函数
@@ -53,9 +71,30 @@ server/                              # 后端目录
 ├── config.yaml                      # 配置文件
 └── go.mod & go.sum                  # 依赖管理
 ```
-```
 
-### 主要功能
+### 数据模型
+
+1. 用户系统
+   - 用户管理与认证
+   - 角色权限控制
+   - JWT 认证
+   - 第三方登录集成
+
+2. 文章系统
+   - 文章管理
+   - 分类管理
+   - 标签管理
+   - 点赞系统
+   - 评论系统
+
+3. 其他功能
+   - 友情链接
+   - 底部链接
+   - 广告管理
+   - 反馈系统
+   - 图片管理
+
+### 核心功能
 
 - 用户认证 (JWT)
 - 验证码支持
@@ -70,12 +109,13 @@ server/                              # 后端目录
 ### 技术栈
 
 - 后端：Go
-- 前端：Vue
+- ORM：Gorm
 - 数据库：MySQL
 - 缓存：Redis
 - 搜索引擎：Elasticsearch
-- 对象存储：七牛云
 - 日志：Zap
+- 任务调度：Cron
+- 对象存储：七牛云
 
 ### 开发环境要求
 
