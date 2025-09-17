@@ -32,8 +32,15 @@ server/                              # 后端目录
 │   ├── config.go                    # 配置加载
 │   ├── server.go                    # 服务器核心
 │   └── zap.go                       # 日志处理
-├── elasticsearch                    # 搜索框架
-│   └── article.go                   # 文章表
+├── flags/                           # 命令行工具与批量管理
+│   ├── enter.go                     # 命令行入口
+│   ├── flag_admin.go                # 管理相关命令
+│   ├── flag_es.go                   # ES 相关命令
+│   ├── flag_es_export.go            # ES 导出
+│   ├── flag_es_import.go            # ES 导入
+│   ├── flag_sql.go                  # SQL 相关命令
+│   ├── flag_sql_export.go           # SQL 导出
+│   └── flag_sql_import.go           # SQL 导入
 ├── global/                          # 全局对象
 │   └── global.go                    # 全局实例定义
 ├── initialize/                      # 初始化模块
@@ -48,23 +55,31 @@ server/                              # 后端目录
 │   │   ├── image_category.go        # 图片分类
 │   │   ├── image_storage.go         # 存储类型
 │   │   ├── user_register.go         # 用户注册
-│   │   └── user_role.go            # 用户角色
-│   └── database/                    # 数据库模型
-│       ├── advertisement.go         # 广告
-│       ├── artical_category.go      # 文章分类
-│       ├── article_like.go          # 文章点赞
-│       ├── article_tag.go           # 文章标签
-│       ├── comment.go               # 评论
-│       ├── feedback.go              # 反馈
-│       ├── footer_link.go           # 底部链接
-│       ├── friend_link.go           # 友情链接
-│       ├── image.go                 # 图片
-│       ├── jwt_blacklist.go         # JWT黑名单
-│       ├── login.go                 # 登录
-│       └── user.go                  # 用户
+│   │   └── user_role.go             # 用户角色
+│   │── database/                    # 数据库模型
+│   │   ├── advertisement.go         # 广告
+│   │   ├── artical_category.go      # 文章分类
+│   │   ├── article_like.go          # 文章点赞
+│   │   ├── article_tag.go           # 文章标签
+│   │   ├── comment.go               # 评论
+│   │   ├── feedback.go              # 反馈
+│   │   ├── footer_link.go           # 底部链接
+│   │   ├── friend_link.go           # 友情链接
+│   │   ├── image.go                 # 图片
+│   │   ├── jwt_blacklist.go         # JWT黑名单
+│   │   ├── login.go                 # 登录
+│   │   └── user.go                  # 用户
+│   ├── elasticsearch/               # ES模型
+│   │   └── article.go               # 文章
+│   └── other/                       # 其他模型
+│       └── es_index.go              # ES索引
+├── service/                         # 服务
+│   ├── enter.go                     # 服务入口
+│   └── es_index.go                  # ES索引服务
 ├── task/                            # 定时任务
 │   └── enter.go                     # 任务入口
 ├── utils/                           # 工具函数
+│   ├── hash.go                      # 密码加密
 │   ├── parse.go                     # 解析工具
 │   └── yaml.go                      # YAML工具
 ├── log/                             # 日志目录
@@ -105,6 +120,7 @@ server/                              # 后端目录
 - Elasticsearch搜索
 - 高德地图服务集成
 - Zap日志系统
+- 命令行工具（批量导入导出、数据管理、运维脚本等）
 
 ### 技术栈
 
