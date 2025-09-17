@@ -2,6 +2,7 @@ package main
 
 import (
 	"server/core"
+	"server/flags"
 	"server/global"
 	"server/initialize"
 )
@@ -23,9 +24,12 @@ func main() {
 	// 7. 程序结束前关闭数据库连接
 	defer global.Redis.Close()
 
-	// 8. 初始化定时任务
+	// 8. 解析命令行参数
+	flags.InitFlag()
+
+	// 9. 初始化定时任务
 	initialize.InitCron()
 
-	// 9. 启动服务器
+	// 10. 启动服务器
 	core.RunServer()
 }

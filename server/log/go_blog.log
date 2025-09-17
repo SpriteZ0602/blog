@@ -1,1 +1,12 @@
 {"level":"INFO","time":"2025-09-04T16:29:07.925+0800","caller":"core/server.go:21","msg":"服务器启动成功","监听地址":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-09-17T13:19:36.107+0800","caller":"core/server.go:21","msg":"服务器启动成功","监听地址":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-09-17T13:21:47.080+0800","caller":"core/server.go:21","msg":"服务器启动成功","监听地址":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-09-17T13:21:55.161+0800","caller":"core/server.go:21","msg":"服务器启动成功","监听地址":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-09-17T13:23:33.430+0800","caller":"flags/enter.go:25","msg":"初始化数据库成功"}
+{"level":"ERROR","time":"2025-09-17T13:45:24.862+0800","caller":"flags/enter.go:40","msg":"导出数据库失败","error":"exit status 2"}
+{"level":"INFO","time":"2025-09-17T13:48:32.048+0800","caller":"flags/enter.go:42","msg":"成功导出数据库"}
+{"level":"INFO","time":"2025-09-17T14:14:13.057+0800","caller":"flags/enter.go:70","msg":"Successfully created ES indices"}
+{"level":"ERROR","time":"2025-09-17T14:38:58.785+0800","caller":"flags/enter.go:101","msg":"Failed to create an administrator:","error":"password length should be between 8 and 20 characters"}
+{"level":"ERROR","time":"2025-09-17T14:39:17.499+0800","caller":"flags/enter.go:101","msg":"Failed to create an administrator:","error":"EOF"}
+{"level":"INFO","time":"2025-09-17T14:39:31.406+0800","caller":"flags/enter.go:103","msg":"Successfully created an administrator"}
+{"level":"INFO","time":"2025-09-17T14:52:01.735+0800","caller":"core/server.go:21","msg":"服务器启动成功","监听地址":"0.0.0.0:8080"}
