@@ -10,3 +10,14 @@
 {"level":"ERROR","time":"2025-09-17T14:39:17.499+0800","caller":"flags/enter.go:101","msg":"Failed to create an administrator:","error":"EOF"}
 {"level":"INFO","time":"2025-09-17T14:39:31.406+0800","caller":"flags/enter.go:103","msg":"Successfully created an administrator"}
 {"level":"INFO","time":"2025-09-17T14:52:01.735+0800","caller":"core/server.go:21","msg":"服务器启动成功","监听地址":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-09-18T10:26:09.868+0800","caller":"core/server.go:21","msg":"服务器启动成功","监听地址":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-09-18T10:44:13.693+0800","caller":"core/server.go:21","msg":"服务器启动成功","监听地址":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-09-18T10:49:05.843+0800","caller":"core/server.go:21","msg":"服务器启动成功","监听地址":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-09-18T10:50:26.582+0800","caller":"core/server.go:21","msg":"已注册路由","method":"POST","path":"/base/captcha"}
+{"level":"INFO","time":"2025-09-18T10:50:26.603+0800","caller":"core/server.go:25","msg":"服务器启动成功","监听地址":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-09-18T10:53:35.180+0800","caller":"core/server.go:21","msg":"已注册路由","method":"POST","path":"/base/captcha"}
+{"level":"INFO","time":"2025-09-18T10:53:35.196+0800","caller":"core/server.go:25","msg":"服务器启动成功","监听地址":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-09-18T10:54:25.550+0800","caller":"core/server.go:21","msg":"已注册路由","method":"POST","path":"/api/base/captcha"}
+{"level":"INFO","time":"2025-09-18T10:54:25.564+0800","caller":"core/server.go:25","msg":"服务器启动成功","监听地址":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-09-18T11:26:15.426+0800","caller":"core/server.go:25","msg":"服务器启动成功","监听地址":"0.0.0.0:8080"}
+{"level":"INFO","time":"2025-09-18T11:33:11.213+0800","caller":"core/server.go:25","msg":"服务器启动成功","监听地址":"0.0.0.0:8080"}

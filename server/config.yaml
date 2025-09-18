@@ -10,7 +10,7 @@ email:
   port: 465
   from: 373900859@qq.com
   nickname: SpriteZ
-  secret:
+  secret: lluoxvwvzlpfbhgf
   is_ssl: true
 
 es:
@@ -65,9 +65,9 @@ system:
   host: 0.0.0.0
   port: 8080
   env: release
-  route_prefix: api
+  router_prefix: api
   use_multipoint: true
-  sessions_secret:
+  sessions_secret: eMLq-SnzHzCQs9izl-Ki0X9t_0CxTX8Pvi2a_z1f4y4=
   oss_type: local
 
 upload:
