@@ -25,12 +25,29 @@
 
 ```
 server/                              # 后端目录
+├── api/                             # API 控制器
+│   ├── base.go                      # 基础API控制器
+│   └── enter.go                     # API入口
 ├── config/                          # 配置文件目录
-│   ├── config_xxx.go                # 读取各种配置
+│   ├── config_captcha.go            # 验证码配置
+│   ├── config_email.go              # 邮件配置
+│   ├── config_es.go                 # Elasticsearch配置
+│   ├── config_gaode.go              # 高德地图配置
+│   ├── config_jwt.go                # JWT配置
+│   ├── config_mysql.go              # MySQL配置
+│   ├── config_qiniu.go              # 七牛云配置
+│   ├── config_qq.go                 # QQ登录配置
+│   ├── config_redis.go              # Redis配置
+│   ├── config_system.go             # 系统配置
+│   ├── config_upload.go             # 上传配置
+│   ├── config_website.go            # 网站配置
+│   ├── config_zap.go                # Zap日志配置
 │   └── enter.go                     # 配置入口
 ├── core/                            # 核心功能
 │   ├── config.go                    # 配置加载
 │   ├── server.go                    # 服务器核心
+│   ├── server_others.go             # 服务器其他功能
+│   ├── server_windows.go            # Windows服务器功能
 │   └── zap.go                       # 日志处理
 ├── flags/                           # 命令行工具与批量管理
 │   ├── enter.go                     # 命令行入口
@@ -42,7 +59,8 @@ server/                              # 后端目录
 │   ├── flag_sql_export.go           # SQL 导出
 │   └── flag_sql_import.go           # SQL 导入
 ├── global/                          # 全局对象
-│   └── global.go                    # 全局实例定义
+│   ├── global.go                    # 全局实例定义
+│   └── model.go                     # 全局模型
 ├── initialize/                      # 初始化模块
 │   ├── cron.go                      # 定时任务初始化
 │   ├── es.go                        # ES 初始化
@@ -56,7 +74,7 @@ server/                              # 后端目录
 │   │   ├── image_storage.go         # 存储类型
 │   │   ├── user_register.go         # 用户注册
 │   │   └── user_role.go             # 用户角色
-│   │── database/                    # 数据库模型
+│   ├── database/                    # 数据库模型
 │   │   ├── advertisement.go         # 广告
 │   │   ├── artical_category.go      # 文章分类
 │   │   ├── article_like.go          # 文章点赞
@@ -73,18 +91,29 @@ server/                              # 后端目录
 │   │   └── article.go               # 文章
 │   └── other/                       # 其他模型
 │       └── es_index.go              # ES索引
-├── service/                         # 服务
+├── request/                         # 请求参数模型
+│   └── base.go                      # 基础请求模型
+├── response/                        # 响应数据模型
+│   ├── base.go                      # 域模型
+│   └── response.go                  # 响应处理
+├── router/                          # 路由配置
+│   ├── base.go                      # 基础路由
+│   └── enter.go                     # 路由入口
+├── service/                         # 服务层
+│   ├── base.go                      # 基础服务
 │   ├── enter.go                     # 服务入口
 │   └── es_index.go                  # ES索引服务
 ├── task/                            # 定时任务
 │   └── enter.go                     # 任务入口
 ├── utils/                           # 工具函数
+│   ├── email.go                     # 邮件工具
 │   ├── hash.go                      # 密码加密
 │   ├── parse.go                     # 解析工具
+│   ├── random.go                    # 随机数工具
 │   └── yaml.go                      # YAML工具
 ├── log/                             # 日志目录
 ├── config.yaml                      # 配置文件
-└── go.mod & go.sum                  # 依赖管理
+└── main.go                          # 程序入口
 ```
 
 ### 数据模型
