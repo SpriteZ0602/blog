@@ -20,12 +20,12 @@ es:
   is_console_print: true
 
 gaode:
-  enable: false
-  key:
+  enable: true
+  key: aa
 
 jwt:
-  access_token_secret:
-  refresh_token_secret:
+  access_token_secret: aa
+  refresh_token_secret: aa
   access_token_expiry_time: 2h
   refresh_token_expiry_time: 7d
   issuer: go_blog

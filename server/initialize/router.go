@@ -2,6 +2,7 @@ package initialize
 
 import (
 	"server/global"
+	"server/middleware"
 	"server/router"
 
 	"github.com/gin-contrib/sessions"
@@ -13,6 +14,7 @@ import (
 func InitRouter() *gin.Engine {
 	gin.SetMode(global.Config.System.Env)
 	Router := gin.Default()
+	Router.Use(middleware.GinLogger(), middleware.GinRecovery(true))
 
 	var store = cookie.NewStore([]byte(global.Config.System.SessionsSecret))
 	Router.Use(sessions.Sessions("session", store))

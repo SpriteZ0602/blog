@@ -3,6 +3,7 @@ package core
 import (
 	"server/global"
 	"server/initialize"
+	"server/service"
 
 	"go.uber.org/zap"
 )
@@ -20,6 +21,10 @@ func RunServer() {
 	//for _, route := range routes {
 	//	global.Log.Info("已注册路由", zap.String("method", route.Method), zap.String("path", route.Path))
 	//}
+
+	// 加载黑名单
+	service.LoadAll()
+
 	// 启动服务器
 	s := initServer(addr, Router)
 	global.Log.Info("服务器启动成功", zap.String("监听地址", addr))

@@ -2,8 +2,8 @@ package api
 
 import (
 	"server/global"
-	"server/request"
-	"server/response"
+	"server/model/request"
+	"server/model/response"
 
 	"github.com/gin-gonic/gin"
 	"github.com/mojocn/base64Captcha"
